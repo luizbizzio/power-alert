@@ -61,9 +61,10 @@ Email Notifications:
    ```
 
 3. **Locale Setting:**
-   The script is configured to use British English for date and time formatting. If you need a different locale, adjust the following line:
+  The script is configured to use a default locale for date and time formatting, specifically 'C', to ensure consistent behavior across different systems. If you need a different locale, you can adjust the following line:
    ```python
-   locale.setlocale(locale.LC_TIME, 'en_GB.UTF-8')
+    locale.setlocale(locale.LC_TIME, 'C') # Default locale
+    # locale.setlocale(locale.LC_TIME, 'en_GB.UTF-8') # Example of another locale
    ```
 
 ## Usage

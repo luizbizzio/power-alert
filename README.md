@@ -15,7 +15,7 @@ The **Power Alert System** is a Python script designed to monitor your network f
 
 <br/>
 
-Email Notifications:
+## Email Notifications
 
 <br/>
 

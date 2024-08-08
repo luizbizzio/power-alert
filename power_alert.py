@@ -7,13 +7,14 @@ from datetime import datetime
 import locale
 
 # Set Local
-locale.setlocale(locale.LC_TIME, 'en_GB.UTF-8')
+locale.setlocale(locale.LC_TIME, 'C')
+# locale.setlocale(locale.LC_TIME, 'en_GB.UTF-8') # Example of another locale 
 
 # Email Configuration
 sender_email = "SENDER_EMAIL"
 sender_password = "SENDER_EMAIL_PASSWORD"
 receiver_emails = ["RECEIVER_EMAIL_1", "RECEIVER_EMAIL_2"]
-smtp_server = "SMTP_SERVER" # Outlook:  smtp.office365.com  //  Gmail: smtp.gmail.com  // Yahoo: smtp.mail.yahoo.com
+smtp_server = "SMTP_SERVER" # SMTP server examples: Outlook - smtp.office365.com, Gmail - smtp.gmail.com, Yahoo - smtp.mail.yahoo.com
 smtp_port = 587
 
 # Device IPs to monitor

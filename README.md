@@ -1,5 +1,9 @@
 # Power Alert System
 
+  <div align="center">
+         <img src="img/power_alert.jpg" alt="Info"/>
+  </div>
+
 ## Overview
 
 The **Power Alert System** is a Python script designed to monitor your network for power outages. It checks if your modem and router are online. If they are, it proceeds to monitor other specified devices. The script sends email notifications when devices go offline or come back online, keeping you updated on your network status.

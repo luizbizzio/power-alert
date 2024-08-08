@@ -1,7 +1,7 @@
 # Power Alert System
 
   <div align="center">
-         <img src="img/power_alert.jpg" alt="Info"/>
+         <img src="img/power_alert.jpg" alt="Info" width="500"/>
   </div>
 
 ## Overview

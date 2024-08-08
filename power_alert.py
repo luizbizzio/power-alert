@@ -6,7 +6,7 @@ from email.mime.text import MIMEText
 from datetime import datetime
 import locale
 
-# Set Local
+# Set Locale
 locale.setlocale(locale.LC_TIME, 'C')
 # locale.setlocale(locale.LC_TIME, 'en_GB.UTF-8') # Example of another locale 
 

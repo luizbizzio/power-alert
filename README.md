@@ -40,10 +40,9 @@ The **Power Alert System** is a Python script designed to monitor your network f
 1. **Email Configuration:**
 
    The script supports sending emails using various SMTP servers. You can configure the script to use your preferred email service by adjusting the SMTP settings. Here are some examples:
-
-- Outlook: smtp.office365.com
-- Gmail: smtp.gmail.com
-- Yahoo: smtp.mail.yahoo.com
+   - Outlook: smtp.office365.com
+   - Gmail: smtp.gmail.com
+   - Yahoo: smtp.mail.yahoo.com
 
    Make sure to replace the placeholder values with your actual email settings:
 

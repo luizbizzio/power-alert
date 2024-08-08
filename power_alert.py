@@ -68,10 +68,17 @@ def check_network_devices():
 
 def monitor_devices(ips):
     email_sent = False
+    first_run = True
+
     while True:
+        if first_run:
+            print("Waiting 1 minute before starting monitoring...")
+            time.sleep(60)
+            first_run = False
+
         if check_network_devices():
             all_offline = all(not is_device_online(ip)[0] for ip in ips)
-            current_time = datetime.now().strftime("%I:%M:%S %p on %B %d, %Y")
+            current_time = datetime.now().strftime("%H:%M:%S do dia %d de %B de %Y")
 
             for ip in ips:
                 _, status = is_device_online(ip)
@@ -79,14 +86,14 @@ def monitor_devices(ips):
 
             if all_offline:
                 if not email_sent:
-                    subject = "Power Outage ⚡🏚"
-                    message = f"A power outage was detected at your residence at {current_time}."
+                    subject = "Queda de Energia ⚡🏚"
+                    message = f"Foi detectada uma queda de energia em sua residência às {current_time}."
                     send_email(subject, message)
                     email_sent = True
             else:
                 if email_sent:
-                    subject = "Power Restored ✅🏡"
-                    message = f"Power was restored to your home at {current_time}."
+                    subject = "Energia Restaurada ✅🏡"
+                    message = f"A energia foi restaurada em sua residência às {current_time}."
                     send_email(subject, message)
                     email_sent = False
 

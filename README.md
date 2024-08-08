@@ -39,7 +39,13 @@ Email Notifications:
 
 1. **Email Configuration:**
 
-   Update the email configuration in the script with your details:
+   The script supports sending emails using various SMTP servers. You can configure the script to use your preferred email service by adjusting the SMTP settings. Here are some examples:
+
+- Outlook: smtp.office365.com
+- Gmail: smtp.gmail.com
+- Yahoo: smtp.mail.yahoo.com
+
+   Make sure to replace the placeholder values with your actual email settings:
 
    ```python
    sender_email = "SENDER_EMAIL"
@@ -49,7 +55,7 @@ Email Notifications:
    smtp_port = 587
    ```
 
-2. **Device IPs:**
+3. **Device IPs:**
 
    Set the IP addresses of the devices you want to monitor:
     ```python
@@ -62,11 +68,10 @@ Email Notifications:
     router_ip = '192.168.0.1'
    ```
 
-3. **Locale Setting:**
+4. **Locale Setting:**
   The script is configured to use a default locale for date and time formatting, specifically 'C', to ensure consistent behavior across different systems. If you need a different locale, you can adjust the following line:
    ```python
     locale.setlocale(locale.LC_TIME, 'C') # Default locale
-    # locale.setlocale(locale.LC_TIME, 'en_GB.UTF-8') # Example of another locale
    ```
 
 ## Usage

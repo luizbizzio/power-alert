@@ -13,7 +13,7 @@ Email Notifications:
 <br/>
 
 <div align="center">
-<img src="img/power_outage.jpg" alt="Power Outage" width="400"/> &nbsp; &nbsp; &nbsp; <img src="img/power_restored.jpg" alt="Power Restore" width="400"/>
+<img src="img/power_outage.jpg" alt="Power Outage" width="400"/> &nbsp; <img src="img/power_restored.jpg" alt="Power Restore" width="400"/>
 </div>
 </br>
 

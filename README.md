@@ -2,7 +2,7 @@
 </br>
 
   <div align="center">
-         <img src="img/power_alert.jpg" alt="Info" width="500"/>
+         <img src="img/power_alert.jpg" alt="Info" width="700"/>
   </div>
 
 ## Overview

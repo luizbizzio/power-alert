@@ -85,7 +85,7 @@ def monitor_devices(ips):
                     email_sent = True
             else:
                 if email_sent:
-                    subject = "Power Restored ✅🏚"
+                    subject = "Power Restored ✅🏡"
                     message = f"Power was restored to your home at {current_time}."
                     send_email(subject, message)
                     email_sent = False

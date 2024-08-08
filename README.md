@@ -1,4 +1,5 @@
 # Power Alert System
+</br>
 
   <div align="center">
          <img src="img/power_alert.jpg" alt="Info" width="500"/>

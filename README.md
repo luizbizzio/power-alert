@@ -78,8 +78,8 @@ Email Notifications:
 1. **Script Behavior:**
    - The script first checks if the modem and router are online. If either is offline, it will wait until both are online.
    - Once the network devices are confirmed online, it monitors the specified devices.
-   - If all monitored devices are offline, an email alert is sent indicating a power outage.
-   - If at least one device comes back online, an email alert is sent indicating that power has been restored.
+   - If all monitored devices are offline are detected as offline for more than 3 consecutive checks, an email alert is sent indicating a power outage.
+   - If at least one monitored device comes back online, an email alert is sent indicating that power has been restored.
 
   </br>
   <div align="center">

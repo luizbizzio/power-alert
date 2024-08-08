@@ -24,7 +24,7 @@ device_ips = ['192.168.0.9','192.168.0.23']
 modem_ip = '192.168.1.254'
 router_ip = '192.168.0.1'
 
-# Number of checks before sending notification
+# Number of times a device must be offline to trigger a notification
 max_offline_checks = 3
 
 offline_counts = {ip: 0 for ip in device_ips}

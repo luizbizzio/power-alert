@@ -17,11 +17,16 @@ smtp_server = "SMTP_SERVER" # Outlook:  smtp.office365.com  //  Gmail: smtp.gmai
 smtp_port = 587
 
 # Device IPs to monitor
-device_ips = ['192.168.0.23', '192.168.0.9']
+device_ips = ['192.168.0.9','192.168.0.23']
 
 # Modem and Router IPs
 modem_ip = '192.168.1.254'
 router_ip = '192.168.0.1'
+
+# Number of checks before sending notification
+max_offline_checks = 3
+
+offline_counts = {ip: 0 for ip in device_ips}
 
 def send_email(subject, message):
     try:
@@ -60,7 +65,7 @@ def check_network_devices():
     print(f"{datetime.now().strftime('%H:%M:%S')} - Router ({router_ip}) is {router_status}.")
 
     if not (modem_online and router_online):
-        print("Waiting modem and router connection..")
+        print("Waiting for modem and router connection...")
         return False
 
     print("Modem and router are online.\nProceeding with device verification.")
@@ -73,31 +78,36 @@ def monitor_devices(ips):
     while True:
         if first_run:
             print("Waiting 1 minute before starting monitoring...")
-            time.sleep(60)
+            time.sleep(60)  # Time before starting script
             first_run = False
 
         if check_network_devices():
-            all_offline = all(not is_device_online(ip)[0] for ip in ips)
             current_time = datetime.now().strftime("%I:%M:%S %p on %B %d, %Y")
+            all_offline = True
 
             for ip in ips:
-                _, status = is_device_online(ip)
+                online, status = is_device_online(ip)
                 print(f"{datetime.now().strftime('%H:%M:%S')} - Device ({ip}) is {status}.")
 
-            if all_offline:
-                if not email_sent:
-                    subject = "Power Outage ⚡🏚"
-                    message = f"A power outage was detected at your residence at {current_time}."
-                    send_email(subject, message)
-                    email_sent = True
-            else:
-                if email_sent:
-                    subject = "Power Restored ✅🏡"
-                    message = f"Power was restored to your home at {current_time}."
-                    send_email(subject, message)
-                    email_sent = False
+                if online:
+                    offline_counts[ip] = 0
+                    all_offline = False
+                else:
+                    offline_counts[ip] += 1
 
-        time.sleep(10) # Time before checking devices again
+            if all([offline_counts[ip] >= max_offline_checks for ip in ips]) and not email_sent:
+                subject = "Power Outage ⚡🏚"
+                message = f"A power outage was detected at your residence at {current_time}."
+                send_email(subject, message)
+                email_sent = True
+            elif any([offline_counts[ip] < max_offline_checks for ip in ips]) and email_sent:
+                subject = "Power Restored ✅🏡"
+                message = f"Power was restored to your home at {current_time}."
+                send_email(subject, message)
+                email_sent = False
+
+        time.sleep(10)  # Time before checking devices again
 
 if __name__ == "__main__":
     monitor_devices(device_ips)
+

@@ -6,6 +6,17 @@ The **Power Alert System** is a Python script designed to monitor your network f
 
 **Recommendation**: This script is particularly useful for systems where the network infrastructure (modem, router and server) is separate from the monitored devices. It ensures that the script only begins monitoring once the core network is fully operational. Tested on Raspberry Pi 4
 
+<br/>
+
+Email Notifications:
+
+<br/>
+
+<div align="center">
+<img src="img/power_outage.jpg" alt="Power Outage" width="400"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="img/power_restored.jpg" alt="Power Restore" width="400"/>
+</div>
+</br>
+
 ## Features
 
 - **Network Monitoring:** Checks the status of your modem, router, and other specified devices.
@@ -64,6 +75,11 @@ The **Power Alert System** is a Python script designed to monitor your network f
    - Once the network devices are confirmed online, it monitors the specified devices.
    - If all monitored devices are offline, an email alert is sent indicating a power outage.
    - If at least one device comes back online, an email alert is sent indicating that power has been restored.
+
+  </br>
+  <div align="center">
+         <img src="img/info.jpg" alt="Info" width="500"/>
+  </div>
   
 ## Notes
 

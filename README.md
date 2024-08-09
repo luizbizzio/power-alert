@@ -5,17 +5,16 @@
          <img src="img/power_alert.jpg" alt="Info" width="700"/>
   </div>
 
-## Overview
+## Overview 📊
 
 The **Power Alert System** is a Python script designed to monitor your network for power outages. It checks if your modem and router are online. If they are, it proceeds to monitor other specified devices. The script sends email notifications when devices go offline or come back online, keeping you updated on your network status.
 
 **Recommendation**: This script is particularly useful for systems where the network infrastructure (modem, router, and server) is separate from the monitored devices. It ensures that monitoring only begins once the core network is fully operational. For improved reliability, it is recommended to use at least two devices for monitoring: one connected via Ethernet and another via Wi-Fi. This setup helps ensure that network issues affecting one connection type do not prevent the detection of network problems. Tested on Raspberry Pi 4.
 
 
-
 <br/>
 
-## Email Notifications
+## Email Notifications 📧
 
 <br/>
 
@@ -24,18 +23,18 @@ The **Power Alert System** is a Python script designed to monitor your network f
 </div>
 </br>
 
-## Features
+## Features 🌟
 
 - **Network Monitoring:** Checks the status of your modem, router, and other specified devices.
 - **Email Alerts:** Sends email notifications when a power outage is detected or when power is restored.
 - **Locale Support:** Configurable to use different locales for date and time formatting.
 
-## Requirements
+## Requirements ✅
 
 - Python 3.x
 - Modules: `smtplib`, `email`, `locale` (included with Python)
 
-## Configuration
+## Configuration ⚙️
 
 1. **Email Configuration:**
 
@@ -73,7 +72,7 @@ The **Power Alert System** is a Python script designed to monitor your network f
     locale.setlocale(locale.LC_TIME, 'C') # Default locale
    ```
 
-## Usage
+## Usage 🚀
 
 1. **Run the Script:**
 
@@ -93,7 +92,7 @@ The **Power Alert System** is a Python script designed to monitor your network f
          <img src="img/info.jpg" alt="Info" width="500"/>
   </div>
   
-## Notes
+## Notes 📝
 
 - **Robustness for Service Use:** This script is designed to be reliable for use as a service. It ensures that the monitoring and notification processes are resilient to network infrastructure changes. Specifically:
   - The script will continue to function properly even if the modem or router is restarted or if there are delays in their initialization.

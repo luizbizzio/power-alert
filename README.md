@@ -1,4 +1,4 @@
-# Power Alert System
+# Power Alert System ⚡
 </br>
 
   <div align="center">

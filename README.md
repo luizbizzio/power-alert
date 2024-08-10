@@ -95,10 +95,13 @@ The **Power Alert System** is a Python script designed to monitor your network f
 ## Notes 📝
 
 - **Robustness for Service Use:** This script is designed to be reliable for use as a service. It ensures that the monitoring and notification processes are resilient to network infrastructure changes. Specifically:
+
   - The script will continue to function properly even if the modem or router is restarted or if there are delays in their initialization.
   - It waits for both the modem and router to be online before proceeding with the monitoring of other devices.
   - This design guarantees that you will receive accurate notifications about power outages and restorations, regardless of the network's state or timing issues.
+
 - Ensure you have network access to the devices and email server specified.
+
 - Adjust the `time.sleep(10)` interval as needed for your monitoring frequency.
 
 ## License

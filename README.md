@@ -104,5 +104,6 @@ The **Power Alert System** is a Python script designed to monitor your network f
 
 - Adjust the `time.sleep(10)` interval as needed for your monitoring frequency.
 
-## License
-This project is licensed under the MIT License.
+## License 📄
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

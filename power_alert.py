@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: Copyright (c) 2024-2026 Luiz Bizzio
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
+
 import os
 import time
 import smtplib
@@ -111,4 +114,5 @@ def monitor_devices(ips):
 
 if __name__ == "__main__":
     monitor_devices(device_ips)
+
 

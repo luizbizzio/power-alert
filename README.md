@@ -106,6 +106,6 @@ The **Power Alert System** is a Python script designed to monitor your network f
 
 ## License 📄
 
-This project is licensed under the [PolyForm Noncommercial License 1.0.0](./LICENSE).
+This project is licensed under the [Apache License 2.0](./LICENSE).
 
 Commercial use, resale, and paid services are not permitted.
